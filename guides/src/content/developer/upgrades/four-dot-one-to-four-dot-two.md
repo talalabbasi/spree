@@ -57,6 +57,11 @@ to
 class AddStockLocationToRMA < ActiveRecord::Migration[4.2]
 ```
 
+
+#before doing step "Install missing migrations" Make sure to remove from /config/initializers/spree.rb if you have Spreei18n installed in previous version. Otherwise it will cause error NameError: uninitialized constant SpreeI18n::Config
+  #Spreei18n::Config.available_locales = [:en, :'fr-FR']
+  #SpreeGlobalize::Config.supported_locales = [:en, :'fr-FR']
+
 ## Install missing migrations
 
 ```bash
